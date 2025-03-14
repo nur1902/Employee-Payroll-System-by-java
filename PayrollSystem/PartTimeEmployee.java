@@ -12,4 +12,8 @@ public class PartTimeEmployee extends Employee {
     public double calculateSalary() {
         return hoursWorked * hourlyRate;
     }
+    @Override
+    public String EmployeeType(){
+        return "Part Time";
+    }
 }
