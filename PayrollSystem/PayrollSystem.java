@@ -26,7 +26,7 @@ class PayrollSystem {
     public void displayPayroll() {
         
         System.out.println("\nEmployee Payroll Details:");
-        for(int i=0;i<25;i++){
+        for(int i=0;i<35;i++){
             System.out.print("--");
         }
         for (Employee emp : employees) {
@@ -38,6 +38,7 @@ class PayrollSystem {
     public void saveData() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(employees);
+            System.out.println("Data Saved successfully!");
         } catch (IOException e) {
             System.out.println("Error saving data: " + e.getMessage());
         }
